@@ -26,6 +26,19 @@
    sudo -i
    ```
 
+    you can choose to change hostname (type 'i' for insert mode and then exit with :wq), then logout and login back
+
+    ```bash
+    vim /etc/hostname {finance}
+
+    hostname {finance}
+
+    exit
+
+    vagrant up
+    ```
+
+
 6. install the following (-y flag is to automatically accept all)
 
     ```bash
@@ -48,7 +61,7 @@
     systemctl disable firewalld
     ```
 
-9. Check your default httpd page using the public IP of the server  (you can use the one from vagrant file) then write some markup in index.html (type 'i' for insert mode and then exit)
+9. Check your default httpd page using the public IP of the server  (you can use the one from vagrant file) then write some markup in index.html (type 'i' for insert mode and then exit with :wq)
 
     ```bash
     cd /var/www/html
