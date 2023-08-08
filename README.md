@@ -41,7 +41,8 @@
 8. enable autostart from boot-time for httpd, stop and disable firewall service
 
     ```bash
-    systemctl enable httpd`
+    systemctl enable httpd
+
     systemctl stop firewalld
 
     systemctl disable firewalld
@@ -50,12 +51,12 @@
 9. Check your default httpd page using the public IP of the server  (you can use the one from vagrant file) then write some markup in index.html (type 'i' for insert mode and then exit)
 
     ```bash
-    cd /var/www/html`
+    cd /var/www/html
 
     vim index.html
     ```
 
-   ```html
+    ```html
     <h1>Welcome Emmanuel!</h1>
     ```
 
