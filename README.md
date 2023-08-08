@@ -48,13 +48,13 @@
         vim index.html
     ```
 
-   switch to edit using 'i' then
+   <!-- switch to edit using 'i' then -->
 
    ```html
        <h1>Welcome Emmanuel!</h1>
     ```
 
-   exit
+   <!-- exit -->
 
     ```bash
         :wq
