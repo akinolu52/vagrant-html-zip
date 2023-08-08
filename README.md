@@ -1,73 +1,93 @@
 # vagrant-html-zip
 
-pick a fedora image
+## Steps to configure and setup vagrant for pushing a zipped file
 
-`vagrant init jacobw/fedora35-arm64`
+1. Pick a fedora image
 
-set the public and private network
+    ```bash
+        vagrant init jacobw/fedora35-arm64
+    ```
 
-set the ram size needed for the server
+2. Set the public and private network
 
-`vagrant up` : to install the image
+3. Set the ram size needed for the server
 
-`vagrant ssh` : to login
+4. Install the image and login to vagrant
 
-switch to root user
+   ``` bash
+        vagrant up
 
-`sudo -i`
+        vagrant ssh
+   ```
 
-then install the following
+5. Switch to root user
+   `bash sudo -i`
 
-`yum install unzip wget httpd vim -y` (-y is to automatically accept all)
+6. install the following
 
-start the httpd service
+    `bash yum install unzip wget httpd vim -y` (-y is to automatically accept all)
 
-`systemctl start httpd`
+7. Start the httpd service
 
-enable autostart from boot-time for httpd
+    `bash systemctl start httpd`
 
-`systemctl enable httpd`
+8. enable autostart from boot-time for httpd, stop and disable firewall service
 
-stop and disable firewall service
+    ```bash
+        systemctl enable httpd`
+        systemctl stop firewalld
 
-`systemctl stop firewalld`
+        systemctl disable firewalld
+    ```
 
-`systemctl disable firewalld`
+9.  Check your default httpd page using the public IP of the server  (you can use the one from vagrant file) then write some markup in index.html
 
-check your default httpd page using the public IP of the server - you can use the one from vagrant file
+    ```bash
+        cd /var/www/html`
 
-write some markup in index.html
+        vim index.html
+    ```
 
-`cd /var/www/html`
+   switch to edit using 'i' then
 
-`vim index.html`
+   ```html
+       <h1>Welcome Emmanuel!</h1>
+    ```
 
-switch to edit using 'i' then <h1>Welcome Emmanuel!</h1>
+   exit
 
-exit `:wq`
+    ```bash
+        :wq
+    ```
 
-check your website
+10. check your website
 
-switch to temp folder, download and unzip the zipped website
+11. switch to temp folder, download and unzip the zipped website
 
-`cd /tmp`
+    ```bash
+        cd /tmp
 
-`wget https://www.tooplate.com/zip-templates/2135_mini_finance.zip`
+        wget https://www.tooplate.com/zip-templates/2135_mini_finance.zip
 
-`unzip 2135_mini_finance.zip`
+        unzip 2135_mini_finance.zip
+    ```
 
-copy the unzipped file to /var/www/html
+12. copy the unzipped file to /var/www/html
 
-`cd 2135_mini_finance`
+    ```bash
+        cd 2135_mini_finance
 
-`cp -r * /var/www/html`
+        cp -r * /var/www/html
+    ```
 
-accept to auto-replace the previous index.html you created.
+13. Accept to auto-replace the previous index.html you created.
 
-then check out the site
+14. then check out the site
 
-`exit` to leave root
+15. `exit` to leave root
 
-power down vagrant to end
+16. power down vagrant to end
 
-`vagrant halt`
+    ```bash
+        vagrant halt
+    ```
