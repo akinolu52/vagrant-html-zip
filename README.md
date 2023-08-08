@@ -26,11 +26,11 @@
    sudo -i
    ```
 
-6. install the following
+6. install the following (-y flag is to automatically accept all)
 
     ```bash
     yum install unzip wget httpd vim -y
-    ``` (-y is to automatically accept all)
+    ```
 
 7. Start the httpd service
 
