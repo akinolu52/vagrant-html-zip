@@ -80,7 +80,11 @@
     :wq
     ```
 
-10. check your website
+10. check your website, you can use the ip
+
+    ```bash
+    ip addr show
+    ```
 
 11. switch to temp folder, download and unzip the zipped website
 
