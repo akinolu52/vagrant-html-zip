@@ -35,7 +35,7 @@
 
     exit
 
-    vagrant up
+    vagrant ssh
 
     sudo -i
     ```
