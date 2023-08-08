@@ -21,15 +21,22 @@
    ```
 
 5. Switch to root user
-   `bash sudo -i`
+
+   ```bash
+   sudo -i
+   ```
 
 6. install the following
 
-    `bash yum install unzip wget httpd vim -y` (-y is to automatically accept all)
+    ```bash
+    yum install unzip wget httpd vim -y
+    ``` (-y is to automatically accept all)
 
 7. Start the httpd service
 
-    `bash systemctl start httpd`
+    ```bash
+    systemctl start httpd
+    ```
 
 8. enable autostart from boot-time for httpd, stop and disable firewall service
 
