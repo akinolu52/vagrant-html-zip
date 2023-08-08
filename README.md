@@ -5,7 +5,7 @@
 1. Pick a fedora image
 
     ```bash
-        vagrant init jacobw/fedora35-arm64
+    vagrant init jacobw/fedora35-arm64
     ```
 
 2. Set the public and private network
@@ -15,9 +15,9 @@
 4. Install the image and login to vagrant
 
    ``` bash
-        vagrant up
+    vagrant up
 
-        vagrant ssh
+    vagrant ssh
    ```
 
 5. Switch to root user
@@ -34,26 +34,26 @@
 8. enable autostart from boot-time for httpd, stop and disable firewall service
 
     ```bash
-        systemctl enable httpd`
-        systemctl stop firewalld
+    systemctl enable httpd`
+    systemctl stop firewalld
 
-        systemctl disable firewalld
+    systemctl disable firewalld
     ```
 
 9. Check your default httpd page using the public IP of the server  (you can use the one from vagrant file) then write some markup in index.html (type 'i' for insert mode and then exit)
 
     ```bash
-        cd /var/www/html`
+    cd /var/www/html`
 
-        vim index.html
+    vim index.html
     ```
 
    ```html
-       <h1>Welcome Emmanuel!</h1>
+    <h1>Welcome Emmanuel!</h1>
     ```
 
     ```bash
-        :wq
+    :wq
     ```
 
 10. check your website
@@ -61,19 +61,19 @@
 11. switch to temp folder, download and unzip the zipped website
 
     ```bash
-        cd /tmp
+    cd /tmp
 
-        wget https://www.tooplate.com/zip-templates/2135_mini_finance.zip
+    wget https://www.tooplate.com/zip-templates/2135_mini_finance.zip
 
-        unzip 2135_mini_finance.zip
+    unzip 2135_mini_finance.zip
     ```
 
 12. copy the unzipped file to /var/www/html
 
     ```bash
-        cd 2135_mini_finance
+    cd 2135_mini_finance
 
-        cp -r * /var/www/html
+    cp -r * /var/www/html
     ```
 
 13. Accept to auto-replace the previous index.html you created.
@@ -85,5 +85,5 @@
 16. power down vagrant to end
 
     ```bash
-        vagrant halt
+    vagrant halt
     ```
