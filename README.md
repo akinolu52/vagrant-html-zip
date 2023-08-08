@@ -40,7 +40,7 @@
         systemctl disable firewalld
     ```
 
-9.  Check your default httpd page using the public IP of the server  (you can use the one from vagrant file) then write some markup in index.html
+9. Check your default httpd page using the public IP of the server  (you can use the one from vagrant file) then write some markup in index.html
 
     ```bash
         cd /var/www/html`
@@ -48,13 +48,13 @@
         vim index.html
     ```
 
-   <!-- switch to edit using 'i' then -->
+   switch to edit using 'i' then
 
    ```html
        <h1>Welcome Emmanuel!</h1>
     ```
 
-   <!-- exit -->
+   exit
 
     ```bash
         :wq
