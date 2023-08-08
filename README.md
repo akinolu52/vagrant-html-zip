@@ -1,5 +1,3 @@
-# vagrant-html-zip
-
 ## Steps to configure and setup vagrant for pushing a zipped file
 
 1. Pick a fedora image
