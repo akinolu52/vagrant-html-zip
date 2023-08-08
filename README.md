@@ -26,7 +26,7 @@
    sudo -i
    ```
 
-    you can choose to change hostname (type 'i' for insert mode and then exit with :wq), then logout and login back
+    (optional) - you can choose to change hostname (type 'i' for insert mode and then exit with :wq), then logout and login back
 
     ```bash
     vim /etc/hostname {finance}
@@ -37,7 +37,6 @@
 
     vagrant up
     ```
-
 
 6. install the following (-y flag is to automatically accept all)
 
