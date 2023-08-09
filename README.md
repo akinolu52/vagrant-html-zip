@@ -52,7 +52,7 @@
     systemctl start httpd
     ```
 
-8. enable autostart from boot-time for httpd, stop and disable firewall service
+8. Enable autostart from boot-time for httpd, stop and disable firewall service
 
     ```bash
     systemctl enable httpd
@@ -78,13 +78,13 @@
     :wq
     ```
 
-10. check your website, you can use the ip
+10. Check your website, you can use the ip
 
     ```bash
     ip addr show
     ```
 
-11. switch to temp folder, download and unzip the zipped website
+11. Switch to temp folder, download and unzip the zipped website
 
     ```bash
     cd /tmp
@@ -94,7 +94,7 @@
     unzip 2135_mini_finance.zip
     ```
 
-12. copy the unzipped file to /var/www/html
+12. Copy the unzipped file to /var/www/html
 
     ```bash
     cd 2135_mini_finance
@@ -104,11 +104,11 @@
 
 13. Accept to auto-replace the previous index.html you created.
 
-14. then check out the site
+14. Check out the site
 
 15. `exit` to leave root
 
-16. power down vagrant to end
+16. Power down vagrant to end
 
     ```bash
     vagrant halt
